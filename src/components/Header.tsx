@@ -6,7 +6,7 @@ const Header = () => {
           <h2>API livros</h2>
         </div>
 
-        <ul className="flex flex-col md:flex-row gap-20 bg-muted rounded-full p-4 px-5">
+        <ul className="flex flex-col md:flex-row gap-4 items-center bg-muted rounded-lg md:rounded-full p-4 px-5">
           <li>
             <a
               href={"/"}
