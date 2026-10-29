@@ -4,15 +4,11 @@ interface Livro {
   imagem: string;
 }
 
-const Card = ({
-  titulo = "Título do livro",
-  descricao = "Descrição breve",
-  imagem = "Descrição da imagem",
-}: Livro) => {
+const Card = ({ titulo, descricao, imagem }: Livro) => {
   return (
-    <article className="bg-secondary p-2 border-2 w-fit text-secondary-foreground hover:bg-background transition-all hover:text-foreground rounded-lg">
+    <article className="flex w-full max-w-80 flex-col gap-2 rounded-lg border-2 bg-secondary p-2 text-secondary-foreground transition-all hover:bg-background hover:text-foreground">
       <div>
-        <p>{titulo}</p>
+        <h3 className="font-bold">{titulo}</h3>
       </div>
       <div>
         <img
@@ -23,7 +19,7 @@ const Card = ({
         />
       </div>
       <div>
-        <h3>Descrição do livro:</h3>
+        <h3 className="font-bold">Descrição do livro:</h3>
         <p>{descricao}</p>
       </div>
     </article>
